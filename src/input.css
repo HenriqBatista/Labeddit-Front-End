@@ -1,3 +1,60 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    h1 {
+      @apply text-4xl text-dark-gray font-bold
+    }
+
+    p {
+        @apply text-base text-black font-normal
+    }
+
+    h3 {
+        @apply text-lg text-black font-bold
+    }
+}
+
+@layer components {
+
+    .button {
+        @apply font-['Noto_Sans'] flex w-full h-12 justify-center rounded-3xl items-center bg-gradient-to-r from-gradient-pink to-light-orange-labeddit hover:from-pink-500 hover:to-yellow-500 shadow-sm text-lg font-bold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-dark-orange-labeddit
+    }
+
+    .button-outline {
+        @apply font-['Noto_Sans'] flex w-full h-12	justify-center rounded-3xl items-center border-[1.5px] border-dark-orange-labeddit bg-white shadow-sm hover:bg-gradient-to-r hover:from-gradient-pink hover:to-light-orange-labeddit text-lg font-bold text-dark-orange-labeddit hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light-orange-labeddit
+    }
+
+    .button-header {
+        @apply font-['Noto_Sans'] text-lg font-semibold text-blue-button
+    }
+
+    .hr {
+        @apply w-full sm:w-[364px] h-[1.5px] bg-gradient-to-r from-gradient-pink to-light-orange-labeddit
+    }
+
+    .input {
+        @apply w-full h-14 rounded-md border-0 text-gray-800 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-light-blue-gray
+    }
+
+    .form {
+        @apply w-full sm:w-[363px] relative flex items-center flex-col gap-2 sm:gap-4
+    }
+
+    .textarea{
+        @apply w-full sm:w-[550px] h-36 bg-lighter-gray rounded-xl border-0 resize-none p-4 focus:ring-1 focus:ring-inset focus:ring-light-blue-gray shadow-sm placeholder:text-lg placeholder:text-dark-gray
+    }
+
+    .card {
+        @apply w-[85vw] sm:w-[550px] bg-white-gray rounded-xl text-lg font-normal leading-6 p-4 border border-dark-white-gray break-words text-ellipsis flex flex-col gap-5
+    }
+
+    .sendby {
+        @apply text-xs text-dark-gray
+    }
+
+    .infos{
+        @apply flex rounded-2xl border border-dark-white-gray w-28 h-8 items-center justify-between py-2 px-3
+    }
+  }

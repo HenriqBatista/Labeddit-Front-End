@@ -1,12 +1,14 @@
-import GlobalContextProvider from "./context/GlobalContext";
-import Router from "./routes/Router"
-
+import {Router} from "./routes/Router";
+import { UserContextProvider } from "./context/UserContext";
+import { PostContextProvider } from "./context/PostContext";
 const App = () => {
   return (
-    <GlobalContextProvider>
-      <Router/>
-    </GlobalContextProvider>
-  )
-}
+    <UserContextProvider>
+      <PostContextProvider>
+        <Router />
+      </PostContextProvider>
+    </UserContextProvider>
+  );
+};
 
-export default App
+export default App;
