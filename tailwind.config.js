@@ -1,32 +1,30 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    colors: {
-      blue: "#4088CB",
-      gray: {
-        header: "#EDEDED",
-        mid: "#A3A3A3",
-        inputBorder: "#D5D8DE",
-        inputText: "#323941",
-        inputPost: "#6F6F6F",
-        cardBg: "#FBFBFB",
-        cardBorder: "#E0E0E0",
+    extend: {
+      colors: {
+        "dark-gray": "#373737",
+        "dark-orange-labeddit": "#FE7E02",
+        "light-orange-labeddit": "#F9B24E",
+        "dark-blue-gray": "#45525B",
+        "light-blue-gray": "#A8BBC6",
+        "gradient-pink": "#FF6489",
+        "lighter-gray": "#EDEDED",
+        "light-gray": "#C4C4C4",
+        "white-gray": "#FBFBFB",
+        "dark-white-gray": "##E0E0E0",
+        "dark-gray": "#6F6F6F",
+        "blue-button": "#4088CB",
       },
-      orange: {
-        border: "#F9B24E",
-        text: "#FE7E02",
+      fontFamily: {
+        sans: ["IBM Plex Sans", "Noto Sans", ...defaultTheme.fontFamily.sans],
       },
-      rose: "#FF6489",
-      red: "#e11d48",
-      purple: "#8b5cf6",
-      black: "#000000",
-      white: "#FFFFFF",
     },
-    fontFamily: {
-      ibm: ["IBM Plex Sans", "sans-serif"],
-      noto: ["Noto Sans", "sans-serif"],
-    },
-    extend: {},
   },
+  darkMode: 'class',
+  plugins: [require("@tailwindcss/forms", 'flowbite/plugin')],
 };
